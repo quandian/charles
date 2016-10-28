@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 481 416.891" enable-background="new 0 0 481 416.891" xml:space="preserve">
+<g id="XMLID_78_">
+	<path id="XMLID_135_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M0.5,330.479c0,8.628,6.994,15.621,15.622,15.621
+		h448.756c8.628,0,15.622-6.993,15.622-15.621v-38.64H0.5V330.479z"/>
+	<path id="XMLID_134_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M464.878,0.5H16.122C7.494,0.5,0.5,7.492,0.5,16.119
+		v275.72h480V16.119C480.5,7.492,473.507,0.5,464.878,0.5z"/>
+	<path id="XMLID_26_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M454.002,21.913H27.938
+		c-8.192,0-14.832,6.478-14.832,14.471v255.455h455.728V36.384C468.833,28.391,462.194,21.913,454.002,21.913z"/>
+	<path id="XMLID_130_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M321.703,409.125
+		c-1.413-1.195-16.164-14.212-19.417-19.637c-3.256-5.426-5.641-43.388-5.641-43.388h-43.919h-24.559h-43.919
+		c0,0-2.389,37.963-5.642,43.388c-3.255,5.425-18.006,18.442-19.416,19.637c-1.41,1.191-4.123,3.794,5.856,4.556
+		c9.984,0.759,24.845,0.651,24.845,0.651h38.277h24.559h38.276c0,0,14.861,0.108,24.839-0.651
+		C325.821,412.92,323.11,410.316,321.703,409.125z"/>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="157.761" y="346.1" width="165.369" height="68.238">
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="157.761" y="346.1" width="165.369" height="68.238" id="XMLID_29_">
+		<g id="XMLID_92_" filter="url(#Adobe_OpacityMaskFilter)">
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="157.761" y="346.1" width="165.369" height="68.238">
+					<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+					<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="157.761" y="346.1" width="165.369" height="68.238" id="XMLID_29_">
+				<g id="XMLID_168_" filter="url(#Adobe_OpacityMaskFilter_1_)">
+				</g>
+			</mask>
+			<linearGradient id="XMLID_30_" gradientUnits="userSpaceOnUse" x1="240.4452" y1="371.9178" x2="240.4452" y2="404.2574">
+				<stop  offset="0" style="stop-color:#000000"/>
+				<stop  offset="0.0611" style="stop-color:#040404"/>
+				<stop  offset="0.124" style="stop-color:#101010"/>
+				<stop  offset="0.1877" style="stop-color:#252525"/>
+				<stop  offset="0.2521" style="stop-color:#424242"/>
+				<stop  offset="0.3168" style="stop-color:#676767"/>
+				<stop  offset="0.3821" style="stop-color:#959595"/>
+				<stop  offset="0.4463" style="stop-color:#CACACA"/>
+				<stop  offset="0.503" style="stop-color:#FFFFFF"/>
+				<stop  offset="0.7091" style="stop-color:#FFFFFF"/>
+				<stop  offset="0.7157" style="stop-color:#F9F9F9"/>
+				<stop  offset="0.8585" style="stop-color:#747474"/>
+				<stop  offset="0.9559" style="stop-color:#212121"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</linearGradient>
+			<path id="XMLID_94_" mask="url(#XMLID_29_)" fill="url(#XMLID_30_)" d="M321.703,409.125
+				c-1.413-1.195-16.164-14.212-19.417-19.637c-3.256-5.426-5.641-43.388-5.641-43.388h-43.919h-24.559h-43.919
+				c0,0-2.389,37.963-5.642,43.388c-3.255,5.425-18.006,18.442-19.416,19.637c-1.41,1.191-4.123,3.794,5.856,4.556
+				c9.984,0.759,24.845,0.651,24.845,0.651h38.277h24.559h38.276c0,0,14.861,0.108,24.839-0.651
+				C325.821,412.92,323.11,410.316,321.703,409.125z"/>
+		</g>
+	</mask>
+	<path id="XMLID_129_" fill="none" d="M321.703,409.125c-1.413-1.195-16.164-14.212-19.417-19.637
+		c-3.256-5.426-5.641-43.388-5.641-43.388h-43.919h-24.559h-43.919c0,0-2.389,37.963-5.642,43.388
+		c-3.255,5.425-18.006,18.442-19.416,19.637c-1.41,1.191-4.123,3.794,5.856,4.556c9.984,0.759,24.845,0.651,24.845,0.651h38.277
+		h24.559h38.276c0,0,14.861,0.108,24.839-0.651C325.821,412.92,323.11,410.316,321.703,409.125z"/>
+	<path id="XMLID_125_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M323.13,411.349h-0.022
+		c-0.192,0.975-1.876,1.921-7.267,2.333c-9.977,0.759-24.839,0.651-24.839,0.651h-38.276h-24.559h-38.277
+		c0,0-14.861,0.108-24.845-0.651c-5.389-0.411-7.074-1.358-7.265-2.333h-0.02c0,0-0.336,2.523,2.511,3.578
+		c2.851,1.058,13.586,1.464,20.343,1.464c3.976,0,28.245,0,47.552,0c13.49,0,24.559,0,24.559,0c19.302,0,43.575,0,47.552,0
+		c6.752,0,17.491-0.405,20.337-1.464C323.463,413.872,323.13,411.349,323.13,411.349z"/>
+	<g id="XMLID_84_">
+		<path id="XMLID_122_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M245.758,10.088c0,2.907-2.354,5.261-5.256,5.261
+			c-2.905,0-5.261-2.354-5.261-5.261c0-2.901,2.356-5.255,5.261-5.255C243.404,4.832,245.758,7.187,245.758,10.088z"/>
+		<path id="XMLID_121_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M245.181,10.088c0,2.586-2.098,4.681-4.679,4.681
+			c-2.589,0-4.684-2.095-4.684-4.681c0-2.584,2.095-4.68,4.684-4.68C243.084,5.407,245.181,7.504,245.181,10.088z"/>
+	</g>
+	
+		<radialGradient id="XMLID_31_" cx="271.7408" cy="20599.5762" r="284.5211" fx="500.56" fy="20688.8086" gradientTransform="matrix(1 0 0 0.2895 0 -5671.3687)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#DCDBDC"/>
+		<stop  offset="0.3299" style="stop-color:#D9D9DA"/>
+		<stop  offset="0.5194" style="stop-color:#D2D2D3"/>
+		<stop  offset="0.6733" style="stop-color:#C6C5C7"/>
+		<stop  offset="0.8081" style="stop-color:#B5B4B6"/>
+		<stop  offset="0.9293" style="stop-color:#9E9FA2"/>
+		<stop  offset="1" style="stop-color:#8D9094"/>
+	</radialGradient>
+	<rect id="XMLID_83_" x="0.5" y="291.839" fill="url(#XMLID_31_)" width="480" height="0.65"/>
+	<g id="XMLID_79_">
+		<g id="XMLID_80_">
+			<path id="XMLID_82_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M246.862,306.178c-0.212,0-0.426,0-0.635,0
+				c-2.242,0.885-4.004,2.255-4.11,5.309C245.177,311.863,246.837,309.424,246.862,306.178z"/>
+			<path id="XMLID_81_" fill="none" stroke="#F7F8F8" stroke-miterlimit="10" d="M251.128,314.382
+				c-1.083-1.607-2.594-2.589-5.057-2.414c-1.313,0.093-2.625,1.128-3.795,1.128c-1.314,0-2.415-1.082-3.642-1.128
+				c-3.248-0.127-5.506,2.843-6.005,5.949c0,0.857,0,1.714,0,2.57c0.83,4.249,2.361,7.785,5.536,9.65c0.417,0,0.838,0,1.261,0
+				c1.744-1.316,4.822-1.043,6.646,0c0.311,0,0.631,0,0.945,0c2.506-1.097,3.556-3.676,4.746-6.111c0-0.108,0-0.216,0-0.32
+				C248.01,322.941,247.575,315.721,251.128,314.382z"/>
+		</g>
+	</g>
+</g>
+</svg>

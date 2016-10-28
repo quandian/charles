@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Charles&int;全栈&infin;在路上&int;</title>
+		<meta name="keywords" content="张高俊,个人站,前端,网页重构,交互,bootstrap,svg,动画" />
+		<meta name="description" content="张高俊的个人网站" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<link rel="bookmark" href="img/favicon.ico" />
+		<link rel="apple-touch-icon" href="img/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/anchorHoverEffect.css" />
+		<link rel="stylesheet" type="text/css" href="css/book.css" />
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="css/material-scrolltop.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/titleAnim.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/anchorHoverEffect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vivus.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/share.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/send.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/theater.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				"use strict";
+				setTimeout(function() {
+					$("header").addClass('loaded');
+					setTimeout(function() {
+						$("header").html("");
+					}, 1000)
+				}, 1500)
+
+				var theater = new TheaterJS();
+
+				theater
+					.describe("Vader", .8, "#typeText_1")
+					.describe("Luke", .6, "#typeText_2");
+
+				theater
+					.on("say:start, erase:start", function(eventName) {
+						var self = this,
+							current = self.current.voice;
+
+						self.utils.addClass(current, "saying");
+					})
+					.on("say:end, erase:end", function(eventName) {
+						var self = this,
+							current = self.current.voice;
+
+						self.utils.removeClass(current, "saying");
+					});
+
+				setTimeout(function() {
+					theater
+						.write("Vader:可以说", 800, -3, "代码", 800)
+						.write("Luke:构建了整个互联网", 800)
+						.write("Vader:承载着无数种科技黑箱", 800)
+						.write("Luke:如果你有机会一探究竟")
+						.write("Vader:为什么不试着用代码去书写你的世界呢？")
+						.write("Luke:万一实现了呢？", 400, -7, "相信自己，一定会实现！");
+				}, 2000)
+			}
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+			  <path class="jumper" stroke-linecap="round" stroke-linejoin="round" d="M47.5,94.3c0-23.5,19.9-42.5,44.5-42.5s44.5,19,44.5,42.5"/>
+			  <g stroke="#fff" stroke-width="1">
+			    <ellipse class="circleL" fill="none" stroke-miterlimit="10" cx="47.2" cy="95.6" rx="10.7" ry="2.7" />
+			    <ellipse class="circleR" fill="none" stroke-miterlimit="10" cx="136.2" cy="95.6" rx="10.7" ry="2.7" />
+			  </g>
+			  <path class="jumper clone" stroke-linecap="round" stroke-linejoin="round" d="M47.5,94.3c0-23.5,19.9-42.5,44.5-42.5s44.5,19,44.5,42.5"/>
+			</svg>
+		</header>
+		<section id="banner">
+			<img id="banner_bg" src="img/banner.jpg" />
+			<img id="logo" src="img/logo.png" />
+			<div id="typeText">
+				<div id="typeText_1"></div>
+				<div id="typeText_2"></div>
+			</div>
+			<div id="resume">
+				<div style="height: 0; width: 0; position: absolute; visibility: hidden;" aria-hidden="true">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+				        <symbol id="ripply-scott" viewBox="0 0 100 100">
+				          <circle id="ripple-shape" cx="1" cy="1" r="1"/>
+				        </symbol>
+				      </svg>
+				</div>
+				<a href="media/简历.docx" target="_blank" id="js-ripple-btn" class="button styl-material">查看个人简历
+					<svg class="ripple-obj" id="js-ripple">
+	          			<use height="100" width="100" xlink:href="#ripply-scott" class="js-ripple"></use>
+	        		</svg>
+				</a>
+			</div>
+			<script src="js/ripple-config.js" type="text/javascript" charset="utf-8"></script>
+			<div class="clearfix"></div>
+		</section>
+
+		<section id="skills" class="container">
+			<div class="row">
+				<div id="kbd" class="col-lg-8 col-lg-offset-2">
+					<img src="img/kbd.png" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 clipAnim">
+					<div class="animation_title">
+						<div class="spinner">
+							<div class="dot1"></div>
+							<div class="dot2"></div>
+						</div>
+						<style type="text/css">
+							.spinner {
+								margin: 0 auto;
+								width: 100px;
+								height: 100px;
+								position: relative;
+								text-align: center;
+								-webkit-animation: sk-rotate 2.0s infinite linear;
+								animation: sk-rotate 2.0s infinite linear;
+							}
+							
+							.dot1,
+							.dot2 {
+								width: 60%;
+								height: 60%;
+								display: inline-block;
+								position: absolute;
+								top: 0;
+								background-color: #F1C40F;
+								border-radius: 100%;
+								-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+								animation: sk-bounce 2.0s infinite ease-in-out;
+							}
+							
+							.dot2 {
+								top: auto;
+								bottom: 0;
+								background-color: #2bdd40;
+								-webkit-animation-delay: -1.0s;
+								animation-delay: -1.0s;
+							}
+							
+							@-webkit-keyframes sk-rotate {
+								100% {
+									-webkit-transform: rotate(360deg)
+								}
+							}
+							
+							@keyframes sk-rotate {
+								100% {
+									transform: rotate(360deg);
+									-webkit-transform: rotate(360deg)
+								}
+							}
+							
+							@-webkit-keyframes sk-bounce {
+								0%,
+								100% {
+									-webkit-transform: scale(0.0)
+								}
+								50% {
+									-webkit-transform: scale(1.0)
+								}
+							}
+							
+							@keyframes sk-bounce {
+								0%,
+								100% {
+									transform: scale(0.0);
+									-webkit-transform: scale(0.0);
+								}
+								50% {
+									transform: scale(1.0);
+									-webkit-transform: scale(1.0);
+								}
+							}
+						</style>
+						<span class="title">视&thinsp;觉&thinsp;动&thinsp;效</span>
+					</div>
+					<div class="skill_content">网页给用户的第一印象就是视觉动效，每一处设计、每一帧动画、每一种效果，都在向用户传达网页内容的直观感象,吸引用户进一步浏览网站内容，发布优质内容引导用户分享，增加网站用户量。
+					</div>
+				</div>
+				<div class="col-lg-4 clipAnim">
+					<div class="animation_title">
+						<svg width="240px" height="240px" viewBox="0 0 187.3 93.7" style="position: absolute;left: 50%;top: -50px;transform: translateX(-50%);" preserveAspectRatio="xMidYMid meet">
+  						<path stroke="#F1C40F" id="outline" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
+        				d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+  						<path id="outline-bg" opacity="0.05" fill="none" stroke="#ededed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" 
+        				d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 				c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+						</svg>
+						<span class="title">用&thinsp;户&thinsp;交&thinsp;互</span>
+					</div>
+					<div class="skill_content">合理的用户交互逻辑，如注册账号的表单验证逻辑,能使用户顺利地上手、浏览。设计逻辑响应用户通过键盘、鼠标的操作，让用户进一步了解网站的正确打开方式,才能促进网站人气的提升。
+					</div>
+				</div>
+				<div class="col-lg-4 clipAnim">
+					<div class="animation_title">
+						<div id="globe_wrap">
+							<ul id="globe">
+								<li><span><img class="atom" src="img/atom_round.png"/></span></li>
+								<li><span><img class="atom" src="img/atom_round.png"/></span></li>
+								<li><span><img class="atom" src="img/atom_round.png"/></span></li>
+							</ul>
+						</div>
+						<span class="title">跨&thinsp;平&thinsp;台&thinsp;开&thinsp;发</span>
+					</div>
+					<div class="skill_content">在PC端日渐低迷时，大多数网站都在做手机端适配，或者直接转向开发Android、iOS等手机端应用，来适应移动化的趋势。于是H5+、"轻应用"的概念应运而生，一套代码解决所有平台的开发。 <a href="http://ask.dcloud.net.cn/docs/" class="findMore" target="_blank">去看看?</a>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</section>
+
+		<section id="sub_banner">
+			<div id="xwzj"></div>
+			<div id="mbtx"></div>
+			<img id="sub_bg_exposed" src="img/sub_banner_exposed.jpg" />
+			<img id="sub_bg" src="img/sub_bg.jpg" />
+			<div class="clearfix"></div>
+		</section>
+
+		<section id="books" class="container">
+			<span id="bookshelf_title">我&thinsp;的&thinsp;书&thinsp;架
+				<span id="bookshelf_subtitle">
+					<section class="cd-intro">
+						<h1 class="cd-headline letters type">
+						<span style="font-size: 30px;">读书之美</span>
+			<span class="cd-words-wrapper waiting">
+							<b class="is-visible" style="font-size: 30px;">宁静以致远</b>
+							<b style="font-size: 30px;">淡泊以明志</b>
+							<b style="font-size: 30px;">静思以修身</b>
+							</span>
+			</h1>
+		</section>
+		</span>
+		</span>
+		<div id="bookshelf"></div>
+		<div class="row">
+			<div class="col-lg-3 refered_book">
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/santi.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							程心扑到工作台前，她带来的气流冲散了低温白雾，她感到被一阵寒气拥抱，但寒气立刻消失了，她仿佛是同自己追赶的东西短暂地解除了一下，那东西随即离开她，飘向另一个维度的时空，她永远失去了他。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/qiushan.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							从物理学角度看，生命这种物质运动形式，与其他的物质运动相比并没有更高的含义，从生命中你找不到新的物理规律，所以从我的角度看，一个人的死与一块冰的消融并没有本质的区别。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+			</div>
+
+			<div class="col-lg-3 refered_book">
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/qingmang.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							有人会因为我们的缺点而讨厌我们，但也会有人因为我们的真实而喜欢我们。我们不必让那些本不喜欢我们的人喜欢上自己，而是坚持让那些本该喜欢我们的人尽快发现自己。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/suibaiyourong.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							你的脸上云淡风轻，谁也不知道你的牙咬得有多紧。你走路带着风，谁也不知道你膝盖上仍有曾摔伤的淤青。你笑得没心没肺，没人知道你哭起来只能无声落泪。要让人觉得毫不费力，只能背后极其努力。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+			</div>
+
+			<div class="col-lg-3 refered_book">
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/divergent.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							我是要做分歧者。我相信大多数的人都是分歧者。即使你表现得无私或者无畏或者诚实或者友好，你的内心深处也必然有更多的自己，被无意或者刻意地掩盖着。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/breakdawn.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							我将在此，永远长眠，让着厌恶世俗的躯体，摆脱厄运的束缚，双眼，再看最后一眼，双臂，在做最后拥抱，双唇，以这气息之门，用深吻与贪婪的死神，达成永远交易 </li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+			</div>
+
+			<div class="col-lg-3 refered_book">
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/dragon.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							我总是忍不住回想起那座城市的夜晚 灯火燃成的篝火 我坐在天台上 时光短促又漫长 风从我的耳边流过带来整个世界的声音 风中 有人弹唱 有人舞蹈 有人相爱
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+				<figure class='book'>
+					<!-- 封面 -->
+					<ul class='hardcover_front'>
+						<li>
+							<img src="img/GOT.jpg" alt="" width="100%" height="100%">
+						</li>
+						<li></li>
+					</ul>
+					<!-- 内页 -->
+					<ul class='page'>
+						<li></li>
+						<li class="book_content">
+							长夜将至，我从今开始守望，至死方休。 我将不娶妻，不封地，不生子。我将不戴宝冠，不争荣宠。 我将尽忠职守，生死于斯。我将生命与荣耀献给守夜人，今夜如此，夜夜皆然。
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<!-- 封底 -->
+					<ul class='hardcover_back'>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class='book_spine'>
+						<li></li>
+						<li></li>
+					</ul>
+				</figure>
+			</div>
+		</div>
+		</section>
+
+		<section id="projs">
+			<div id="projs_title">我&thinsp;的&thinsp;作&thinsp;品</div>
+			<div id="imac">
+				<img style="display: none;" src="img/imac.png" />
+			</div>
+			<div id="workOnPC" style="display: none;">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="img/workOnPC_1.jpg" /></li>
+						<li><img src="img/workOnPC_2.jpg" /></li>
+						<li><img src="img/workOnPC_3.jpg" /></li>
+						<li><img src="img/workOnPC_4.jpg" /></li>
+						<li><img src="img/workOnPC_5.jpg" /></li>
+						<li id="work_chatroom" style="cursor: pointer;"><img src="img/workOnPC_6.jpg" /></li>
+						<li><img src="img/workOnPC_7.jpg" /></li>
+						<li><img src="img/workOnPC_8.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+			<div id="ipad">
+				<img style="display: none;" src="img/ipad.png" />
+			</div>
+			<div id="workOnPad" style="display: none;">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="img/workOnPad_1.jpg" /></li>
+						<li><img src="img/workOnPad_2.jpg" /></li>
+						<li><img src="img/workOnPad_3.jpg" /></li>
+						<li><img src="img/workOnPad_4.jpg" /></li>
+						<li><img src="img/workOnPad_5.jpg" /></li>
+					</ul>
+				</div>
+			</div>
+			<div id="iphone">
+				<img style="display: none;" src="img/iphone.png" />
+			</div>
+			<div id="workOnApp" style="display: none;">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="img/workOnPhone_1.png" /></li>
+						<li><img src="img/workOnPhone_2.png" /></li>
+						<li><img src="img/workOnPhone_3.png" /></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<section id="contact">
+				<div id="contact_content">
+					<div class="container" style="position: relative;">
+						<div class="row">
+							<div class="col-lg-6">
+								<div id="lianxi"><span id="lianxi_title">联&thinsp;系&thinsp;我</span><br />
+									<span id="lianxi_subtitle">打声招呼？</span>
+								</div>
+								<div id="lianxi_btns">
+									<div class="share">
+										<button class="share-toggle-button share_clip">
+										<i class="share-icon fa fa-comments-o" style="position: relative;left: 5px;"></i>
+										</button>
+										<ul class="share-items">
+											<li class="share-item">
+												<a class="share-button">
+													<i class="share-icon fa fa-weibo"></i>
+													<span class="share_text">@G_J_Charles</span>
+												</a>
+											</li>
+											<li class="share-item">
+												<a class="share-button">
+													<i class="share-icon fa fa-envelope-o"></i>
+													<span class="share_text" style="left: -155px;margin-top: 275px;">584576916@qq.com</span>
+												</a>
+											</li>
+											<li class="share-item">
+												<a class="share-button">
+													<i class="share-icon fa fa-qq"></i>
+													<span class="share_text">@584576916</span>
+												</a>
+											</li>
+											<li class="share-item">
+												<a class="share-button">
+													<i class="share-icon fa fa-weixin"></i>
+													<span class="share_text"><div id="qrcode"></div></span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div id="sendSug"><span id="sendSug_title">意&thinsp;见&thinsp;与&thinsp;建&thinsp;议</span><br />
+									<span id="sendSug_subtitle">有想法？</span>
+								</div>
+								<div id="message"><input type="text" id="email" placeholder="您的邮件地址" /><br />
+									<input type="text" id="sug" placeholder="您的留言" />
+								</div>
+								<div class="send">
+									<div class="send-indicator">
+										<div class="send-indicator-dot"></div>
+										<div class="send-indicator-dot"></div>
+										<div class="send-indicator-dot"></div>
+										<div class="send-indicator-dot"></div>
+									</div>
+									<button class="send-button">
+										<div class="sent-bg"></div>
+										<i class="fa fa-send send-icon" style="position: relative;left: -5px;"></i>
+										<i class="fa fa-check sent-icon" style="position: relative;left: -5px;"></i>
+									</button>
+								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+		  							<defs>
+			   	 						<filter id="goo">
+				      						<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+				      						<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				      						<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			    						</filter>
+			    						<filter id="goo-no-comp">
+			      							<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+			      							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+			    						</filter>
+			  							</defs>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="workmask"></div>
+				<video id="workHard" autoplay="autoplay" loop="true">
+					<source src="media/work.mp4" type="video/mp4">
+					<source src="media/work.ogv" type="video/ogg">
+					<source src="media/work.webm" type="video/webm">
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="media/work.mp4">下载视频</a>
+				</video>
+			</section>
+			<div id="copyright">©2016 张高俊 All rights reserved 蜀ICP备16015991号</div>
+		</footer>
+		<button class="material-scrolltop" type="button"></button>
+		<script src="js/material-scrolltop.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('body').materialScrollTop({
+					revealElement: '#banner',
+					revealPosition: 'bottom',
+					onScrollEnd: function() {
+						console.log('Scrolling End');
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>
